@@ -1,13 +1,18 @@
 import React from "react";
 
 function Body(props) {
-    
+
     function increaseScore() {
         props.handleCurrentScore()
     }
 
     function resetScore() {
-        props.handleBestScore()
+        if (props.score.current > props.score.best) {
+            props.handleBestScore()
+        } else {
+            props.resetCurrentScore();
+        }
+        
     }
 
 

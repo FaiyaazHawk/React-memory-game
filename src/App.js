@@ -25,14 +25,23 @@ function App() {
     }))
   }
 
+  function resetCurrentScore() {
+    setScore(prevScore => ({
+      ...prevScore,
+      current: 0
+    }))
+  }
+
 
   return (
     <div className="App">
       <h1>Memory Game</h1>
       <Header score={score} ></Header>
       <Body 
+      score={score}
       handleCurrentScore={handleCurrentScore}
-      handleBestScore={handleBestScore} 
+      handleBestScore={handleBestScore}
+      resetCurrentScore={resetCurrentScore}
       ></Body>
     </div>
   );
