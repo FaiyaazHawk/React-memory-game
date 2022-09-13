@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import "./styles/App.css"
 
 
 function App() {
@@ -35,7 +36,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Memory Game</h1>
       <Header score={score} ></Header>
       <Body 
       score={score}

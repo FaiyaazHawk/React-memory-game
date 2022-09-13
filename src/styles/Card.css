@@ -1,0 +1,12 @@
+.card {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    border: 2px ridge red;
+}

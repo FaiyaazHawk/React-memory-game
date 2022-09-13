@@ -1,7 +1,8 @@
 import React from "react";
+import Cardgrid from "./Cardgrid"
 
 function Body(props) {
-
+    /////functions to increase and reset score. apply to game logic in body
     function increaseScore() {
         props.handleCurrentScore()
     }
@@ -19,8 +20,7 @@ function Body(props) {
 
     return (
         <div>
-            <button onClick={increaseScore}>Increase score</button>
-            <button onClick={resetScore}>Reset score</button>
+            <Cardgrid></Cardgrid>
         </div>
         
         
