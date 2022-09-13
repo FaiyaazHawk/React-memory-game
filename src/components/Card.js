@@ -3,8 +3,8 @@ import "../styles/Card.css"
 
 function Card(props) {
     return (
-        <div className="card">
-            <h2>{props.value}</h2>
+        <div>
+            <div className="card" onClick={props.shuffleDeck}>{props.value}</div>
         </div>
     )
 }

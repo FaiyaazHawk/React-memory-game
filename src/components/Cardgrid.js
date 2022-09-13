@@ -7,14 +7,21 @@ function Cardgrid() {
         1,2,3,4,5,6,7,8
     ])
 
-
+    function shuffleDeck() {
+        console.log('shuffle')
+    }
 
     
-    const cardElementts = cards.map(card => <Card value={card}></Card>)
+    const cardElements = cards.map((card) => 
+    <Card shuffleDeck={shuffleDeck} 
+        value={card}
+        key={card}
+         >
+        </Card>)
 
     return (
         <div className="grid">
-            {cardElementts}
+            {cardElements}
         </div>
     )
 }
