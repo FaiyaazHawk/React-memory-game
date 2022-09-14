@@ -53,7 +53,7 @@ function Cardgrid(props) {
 
     
     function handleCard(alt) {
-        if (alt in pickedCards) {
+        if (pickedCards.includes(alt)) {
             props.resetScore()
             setPickedCards([])
         } else {

@@ -7,7 +7,7 @@ function Header(props) {
     
     return(
         <header>
-           <h1>Can you recall?</h1>
+           <h1>Memory game</h1>
            <Scoreboard score={props}/>
         </header>
     )
