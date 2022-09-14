@@ -20,7 +20,10 @@ function Body(props) {
 
     return (
         <div>
-            <Cardgrid></Cardgrid>
+            <Cardgrid
+            increaseScore={increaseScore}
+            resetScore={resetScore}
+            ></Cardgrid>
         </div>
         
         

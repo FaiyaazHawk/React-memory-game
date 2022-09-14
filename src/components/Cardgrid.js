@@ -10,7 +10,7 @@ import kaoru from "../images/kaoru.jpg"
 import majima from "../images/majima.jpeg"
 import nishiki from "../images/nishiki.jpeg"
 
-function Cardgrid() {
+function Cardgrid(props) {
 
     const images = [
         {
@@ -52,8 +52,20 @@ function Cardgrid() {
     const [pickedCards, setPickedCards] = React.useState([])
 
     
+    function handleCard(alt) {
+        if (alt in pickedCards) {
+            props.resetScore()
+            setPickedCards([])
+        } else {
+            props.increaseScore()
+            setPickedCards(()=>(
+                [...pickedCards, alt]
+            ))
+        }
+    }
+
     function shuffleDeck(event) {
-        console.log(event.target.alt)
+        handleCard(event.target.alt)
         setCards(shuffleArray(cards))
     }
     ///found online. works so using it
