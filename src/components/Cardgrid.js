@@ -7,10 +7,14 @@ function Cardgrid() {
         1,2,3,4,5,6,7,8
     ])
 
+    
     function shuffleDeck() {
-        console.log('shuffle')
+        setCards(shuffleArray(cards))
     }
-
+    ///found online. works so using it
+    function shuffleArray(array) {
+        return [...array].sort(() => Math.random() - 0.5)
+    }
     
     const cardElements = cards.map((card) => 
     <Card shuffleDeck={shuffleDeck} 
