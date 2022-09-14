@@ -4,7 +4,7 @@ import "../styles/Card.css"
 function Card(props) {
     return (
         <div>
-            <div className="card" onClick={props.shuffleDeck}>{props.value}</div>
+            <img className="card" src={props.value} onClick={props.shuffleDeck}></img>
         </div>
     )
 }
