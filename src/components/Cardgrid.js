@@ -13,21 +13,47 @@ import nishiki from "../images/nishiki.jpeg"
 function Cardgrid() {
 
     const images = [
-        arai,
-        daigo,
-        hana,
-        haruka,
-        ichiban,
-        kaoru,
-        majima,
-        nishiki
+        {
+            name: arai,
+            id: 1
+        },
+        {
+            name: daigo,
+            id: 2
+        },
+        {
+            name: hana,
+            id: 3
+        },
+        {
+            name:haruka,
+            id: 4
+        },
+        {
+            name:ichiban,
+            id: 5
+        },
+        {
+            name:kaoru,
+            id: 6
+        },
+        {
+            name:majima,
+            id: 7
+        },
+        {
+            name:nishiki,
+            id: 8
+        }
     ]
     
 
     const [cards, setCards] = React.useState(images)
+    const [pickedCards, setPickedCards] = React.useState([])
 
     
-    function shuffleDeck() {
+    function shuffleDeck(event) {
+        console.log(event.target.alt)
         setCards(shuffleArray(cards))
     }
     ///found online. works so using it
@@ -36,9 +62,10 @@ function Cardgrid() {
     }
     
     const cardElements = cards.map((card) => 
-    <Card shuffleDeck={shuffleDeck} 
-        value={card}
-        key={card}
+    <Card shuffleDeck={shuffleDeck}
+        id={card.id} 
+        value={card.name}
+        key={card.id}
          >
         </Card>)
 
