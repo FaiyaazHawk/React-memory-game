@@ -4,9 +4,9 @@ import "../styles/Footer.css"
 function Footer() {
     return (
         <div className="footer">
-            <p>Pick each character once. Max score possible for now is 8</p>
+            <p>Pick each character once. Max score possible is 9</p>
             <br></br>
-            <p>Made by Faiyaaz Haque with React</p>
+            <p>Made by Faiyaaz with React</p>
         </div>
     )
 }

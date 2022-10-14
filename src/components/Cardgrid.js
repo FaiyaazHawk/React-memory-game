@@ -9,6 +9,7 @@ import ichiban from "../images/ichiban.jpeg"
 import kaoru from "../images/kaoru.jpg"
 import majima from "../images/majima.jpeg"
 import nishiki from "../images/nishiki.jpeg"
+import kiryu from "../images/kiryu.jpg"
 
 function Cardgrid(props) {
 
@@ -44,6 +45,10 @@ function Cardgrid(props) {
         {
             name:nishiki,
             id: 8
+        },
+        {
+            name:kiryu,
+            id:9
         }
     ]
     

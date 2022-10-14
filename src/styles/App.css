@@ -4,8 +4,6 @@
 }
 
 .App {
-    height: 100vh;
-    width: 100vw;
-    background: rgb(255,255,255);
+    
     background: linear-gradient(30deg, rgba(255,255,255,1) 20%, rgba(191,153,153,1) 57%, rgba(134,62,62,1) 90%);
 }
